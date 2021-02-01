@@ -5,7 +5,12 @@ const userList = document.querySelector("#userList")
 form.addEventListener("submit", (evt) => {
     evt.preventDefault()
     let input = document.querySelector("#input")
-    fetch(requestUrl + input.value)
+    fetch(requestUrl + input.value, {
+        method: 'GET',
+        headers: {
+            'Content-Type': 'application/json'
+        }
+    })
         .then((responseData) => {
             return responseData.json()
         })
