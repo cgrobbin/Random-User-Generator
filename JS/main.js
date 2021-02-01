@@ -24,13 +24,12 @@ form.addEventListener("submit", (evt) => {
         })
 })
 
-// adjust for img later (stretch goal)
 const addUser = (person) => {
     let img = document.createElement("img")
     let div = document.createElement("div")
     let p1 = document.createElement("p")
     let p2 = document.createElement("p")
-    img.src = `${person.picture.thumbnail}`
+    img.src = `${person.picture.medium}`
     div.textContent = `${person.name.first} ${person.name.last}`
     p1.textContent = `${person.location.city}, ${person.location.state}`
     p2.textContent = `${person.email}`

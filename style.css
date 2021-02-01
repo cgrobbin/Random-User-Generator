@@ -1,0 +1,32 @@
+body {
+    background-color: darkgray;
+    text-align: center;
+    font-family: "Architects Daughter";
+}
+
+h1 {
+    font-weight: bold;
+    border: solid black;
+    font-size: 45px;
+}
+
+h3 {
+    font-size: 25px;
+}
+
+h4 {
+    font-size: 20px;
+}
+
+#input {
+    font-size: 15px;
+    border: 2px solid black;
+    border-radius: 10%;
+}
+
+#submit {
+    font-size: 15px;
+    background-color: red;
+    border-radius: 15%;
+    border-color: black;
+}
