@@ -33,16 +33,17 @@ form.addEventListener("submit", (evt) => {
 //     let listUser = document.getElementsByClassName("userList")
 
 const addUser = (person) => {
-    let div1 = document.createElement("div")
-    userList.appendChild(div1)
+    let section = document.createElement("section")
+    userList.appendChild(section)
     let img = document.createElement("img")
-    let div2 = document.createElement("div")
+    let div = document.createElement("div")
     let p1 = document.createElement("p")
     let p2 = document.createElement("p")
     img.src = `${person.picture.medium}`
-    div2.textContent = `${person.name.first} ${person.name.last}`
+    div.textContent = `${person.name.first} ${person.name.last}`
     p1.textContent = `${person.location.city}, ${person.location.state}`
     p2.textContent = `${person.email}`
-    div1.appendChild(img)
-    div1.appendChild(div2).appendChild(p1).appendChild(p2)
+    section.appendChild(img)
+    section.appendChild(div).appendChild(p1).appendChild(p2)
 }
+
