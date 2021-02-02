@@ -2,20 +2,36 @@ body {
     background-color: darkgray;
     text-align: center;
     font-family: "Architects Daughter";
+    display: grid;
+    grid-template-rows: 125px 75px 75px 50px auto 75px;
+    grid-template-areas: 
+        "header"
+        "comment"
+        "question"
+        "input"
+        "content"
+        "footer";
 }
 
 h1 {
     font-weight: bold;
     border: solid black;
     font-size: 45px;
+    grid-area: "header";
 }
 
 h3 {
     font-size: 25px;
+    grid-area: "comment";
 }
 
 h4 {
     font-size: 20px;
+    grid-area: "question";
+}
+
+#form {
+    grid-area: "input";
 }
 
 #input {
@@ -29,15 +45,16 @@ h4 {
     background-color: red;
     border-radius: 15%;
     border-color: black;
+    font-weight: bold;
 }
 
 main {
     padding-top: 25px;
     margin-top: 10px;
+    grid-area: "content";
 }
 
 #userList {
-    font-family: "Montserrat";
     padding-top: 20px;
     display: grid;
     grid-template-columns: 30% 30% 30%;
@@ -45,7 +62,7 @@ main {
 }
 
 section {
-    border: 3px solid white;
+    border: 3px solid darkred;
     margin: 10px 0 10px 0;
     display: grid;
     grid-template-columns: 1fr 2fr;
@@ -54,6 +71,8 @@ section {
         "pic info"
         "name info";
     font-size: 18px;
+    font-family: "Lato";
+    background-color: whitesmoke;
 }
 
 main > section > img {
@@ -73,6 +92,8 @@ main > section > div {
     grid-column-end: 2;
     grid-row-start: 2;
     grid-row-end: 3;
+    font-weight: bold;
+    padding: 5px 0 0 3px;
 }
 
 main > section > p:first-child {
@@ -82,6 +103,7 @@ main > section > p:first-child {
     grid-column-end: 3;
     grid-row-start: 1;
     grid-row-end: 2;
+    margin-top: 10px;
 }
 
 main > section > p:last-child {
@@ -94,4 +116,17 @@ main > section > p:last-child {
     color: blue;
     text-decoration: underline;
     font-size: 15px;
+}
+
+footer {
+    grid-area: "footer";
+    align-items: center;
+}
+
+button {
+    font-size: 15px;
+    background-color: red;
+    font-weight: bold;
+    border-radius: 15%;
+    border-color: black;
 }

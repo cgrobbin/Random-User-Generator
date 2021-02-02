@@ -24,14 +24,6 @@ form.addEventListener("submit", (evt) => {
         })
 })
 
-// const addUser = () => {
-//     let section = document.createElement("section")
-//     section.classname = "userList"
-//     userList.appendChild(section)
-// }
-// addUser()
-//     let listUser = document.getElementsByClassName("userList")
-
 const addUser = (person) => {
     let section = document.createElement("section")
     userList.appendChild(section)
@@ -49,3 +41,9 @@ const addUser = (person) => {
     section.appendChild(p2)
 }
 
+const reload = document.getElementById("reload")
+reload.addEventListener("reload", function(evt) {
+    evt.preventDefault
+    location.reload()
+    console.log("Reload Successful")
+})
