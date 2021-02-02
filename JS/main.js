@@ -17,14 +17,25 @@ form.addEventListener("submit", (evt) => {
         .then((jsonData) => {
             console.log("Here is the data:", jsonData)
             let people = jsonData.results
-            people.forEach(addUser)
+            // let section = document.createElement("section")
+            // section.id = "userList"
+            // list.appendChild(section)
+            people.forEach(userInfo)
         })
         .catch((error) => {
             console.error("ERROR: ", error)
         })
 })
 
-const addUser = (person) => {
+// const addUser = () => {
+//     let section = document.createElement("section")
+//     section.classname = "userList"
+//     userList.appendChild(section)
+// }
+// addUser()
+//     let listUser = document.getElementsByClassName("userList")
+
+const userInfo = (person) => {
     let img = document.createElement("img")
     let div = document.createElement("div")
     let p1 = document.createElement("p")
