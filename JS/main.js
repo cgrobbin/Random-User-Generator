@@ -44,6 +44,8 @@ const addUser = (person) => {
     p1.textContent = `${person.location.city}, ${person.location.state}`
     p2.textContent = `${person.email}`
     section.appendChild(img)
-    section.appendChild(div).appendChild(p1).appendChild(p2)
+    section.appendChild(div)
+    section.appendChild(p1)
+    section.appendChild(p2)
 }
 

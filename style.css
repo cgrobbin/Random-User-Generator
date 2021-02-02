@@ -51,25 +51,47 @@ section {
     grid-template-columns: 1fr 2fr;
     grid-template-rows: 2fr 1fr;
     grid-template-areas: 
-        "pic name"
-        "pic info";
+        "pic info"
+        "name info";
     font-size: 18px;
 }
 
-img {
+main > section > img {
     grid-area: pic;
     border-radius: 3px;
-    width: 65%;
-    margin: 5px;
+    width: 50%;
+    margin: 15px 0 0 25px;
     border: 1px solid black;
+    display: flex;
+    align-items: center;
+    position: relative;
 }
 
-div {
+main > section > div {
     grid-area: name;
-    font-weight: bold;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 3;
 }
 
-main > p {
+main > section > p:first-child {
     grid-area: info;
+    font-size: 8px;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
 
+main > section > p:last-child {
+    grid-area: info;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    margin-top: -5px;
+    color: blue;
+    text-decoration: underline;
+    font-size: 15px;
 }
