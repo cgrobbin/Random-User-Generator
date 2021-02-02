@@ -36,16 +36,40 @@ main {
     margin-top: 10px;
 }
 
-section {
-    border: 3px solid white;
-    margin: 10px 0 10px 0;
-}
-
 #userList {
     font-family: "Montserrat";
     padding-top: 20px;
     display: grid;
     grid-template-columns: 30% 30% 30%;
     justify-content: space-around;
-    
+}
+
+section {
+    border: 3px solid white;
+    margin: 10px 0 10px 0;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 2fr 1fr;
+    grid-template-areas: 
+        "pic name"
+        "pic info";
+    font-size: 18px;
+}
+
+img {
+    grid-area: pic;
+    border-radius: 3px;
+    width: 65%;
+    margin: 5px;
+    border: 1px solid black;
+}
+
+div {
+    grid-area: name;
+    font-weight: bold;
+}
+
+main > p {
+    grid-area: info;
+
 }
