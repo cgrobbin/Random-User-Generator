@@ -17,10 +17,7 @@ form.addEventListener("submit", (evt) => {
         .then((jsonData) => {
             console.log("Here is the data:", jsonData)
             let people = jsonData.results
-            // let section = document.createElement("section")
-            // section.id = "userList"
-            // list.appendChild(section)
-            people.forEach(userInfo)
+            people.forEach(addUser)
         })
         .catch((error) => {
             console.error("ERROR: ", error)
@@ -35,15 +32,17 @@ form.addEventListener("submit", (evt) => {
 // addUser()
 //     let listUser = document.getElementsByClassName("userList")
 
-const userInfo = (person) => {
+const addUser = (person) => {
+    let div1 = document.createElement("div")
+    userList.appendChild(div1)
     let img = document.createElement("img")
-    let div = document.createElement("div")
+    let div2 = document.createElement("div")
     let p1 = document.createElement("p")
     let p2 = document.createElement("p")
     img.src = `${person.picture.medium}`
-    div.textContent = `${person.name.first} ${person.name.last}`
+    div2.textContent = `${person.name.first} ${person.name.last}`
     p1.textContent = `${person.location.city}, ${person.location.state}`
     p2.textContent = `${person.email}`
-    userList.appendChild(img)
-    userList.appendChild(div).appendChild(p1).appendChild(p2)
+    div1.appendChild(img)
+    div1.appendChild(div2).appendChild(p1).appendChild(p2)
 }
