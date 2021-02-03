@@ -63,22 +63,21 @@ footer {
 #userList {
     padding-top: 20px;
     display: grid;
-    grid-template-columns: 30% 30% 30%;
+    grid-template-rows: 1fr;
     justify-content: space-around;
 }
 
 section {
     border: 3px solid darkred;
     margin: 10px 0 10px 0;
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    grid-template-rows: 2fr 1fr;
-    grid-template-areas: 
-        "pic info"
-        "name info";
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    flex-wrap: wrap;
     font-size: 18px;
     font-family: "Lato";
     background-color: whitesmoke;
+    align-content: center;
 }
 
 main > section > img {
@@ -87,9 +86,7 @@ main > section > img {
     width: 50%;
     margin: 15px 0 0 25px;
     border: 1px solid black;
-    display: flex;
     align-items: center;
-    position: relative;
 }
 
 main > section > div {
@@ -132,10 +129,18 @@ button {
     border-color: black;
 }
 
-@media only screen and (max-width: 1024px) {
+ @media only screen and (min-width: 789px) {
     #userList {
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
+        display: grid;
+        grid-template-columns: 30% 30% 30%;
+        justify-content: space-around; 
     }
-}
+    section {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        grid-template-rows: 2fr 1fr;
+        grid-template-areas: 
+            "pic info"
+            "name info";
+    }
+} 
