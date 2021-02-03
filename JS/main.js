@@ -20,7 +20,7 @@ form.addEventListener("submit", (evt) => {
             people.forEach(addUser)
         })
         .catch((error) => {
-            console.error("ERROR: ", error)
+            window.alert("ERROR: " + error + "\nPlease try again later")
         })
 })
 
