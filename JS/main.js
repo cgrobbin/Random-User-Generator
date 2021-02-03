@@ -42,8 +42,7 @@ const addUser = (person) => {
 }
 
 const reload = document.getElementById("reload")
-reload.addEventListener("reload", function(evt) {
-    evt.preventDefault
-    location.reload()
+reload.addEventListener("click", (evt) => {
+    window.location.reload()
     console.log("Reload Successful")
 })
