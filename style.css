@@ -3,7 +3,7 @@ body {
     text-align: center;
     font-family: "Architects Daughter";
     display: grid;
-    grid-template-rows: 125px 75px 75px 50px auto 75px;
+    grid-template-rows: 125px 75px 75px 50px 1fr 10px;
     grid-template-areas: 
         "header"
         "comment"
@@ -52,6 +52,12 @@ main {
     padding-top: 25px;
     margin-top: 10px;
     grid-area: "content";
+}
+
+footer {
+    grid-area: "footer";
+    align-items: center;
+    grid-row: 6 / 7;
 }
 
 #userList {
@@ -116,11 +122,6 @@ main > section > p:last-child {
     color: blue;
     text-decoration: underline;
     font-size: 15px;
-}
-
-footer {
-    grid-area: "footer";
-    align-items: center;
 }
 
 button {
