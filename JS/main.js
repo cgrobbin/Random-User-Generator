@@ -46,3 +46,12 @@ reload.addEventListener("click", (evt) => {
     window.location.reload()
     console.log("Reload Successful")
 })
+
+// const users = document.getElementsByClassName("userInfo")
+// users.addEventListener("toggle", (evt) => {
+//     if (users.style.display == "none") {
+//         users.style.display = "block"
+//     } else {
+//         users.style.display = "none"
+//     }
+// })
