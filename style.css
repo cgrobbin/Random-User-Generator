@@ -17,21 +17,21 @@ h1 {
     font-weight: bold;
     border: solid black;
     font-size: 45px;
-    grid-area: "header";
+    grid-area: header;
 }
 
 h3 {
     font-size: 25px;
-    grid-area: "comment";
+    grid-area: comment;
 }
 
 h4 {
     font-size: 20px;
-    grid-area: "question";
+    grid-area: question;
 }
 
 #form {
-    grid-area: "input";
+    grid-area: input;
 }
 
 #input {
@@ -51,11 +51,11 @@ h4 {
 main {
     padding-top: 25px;
     margin-top: 10px;
-    grid-area: "content";
+    grid-area: content;
 }
 
 footer {
-    grid-area: "footer";
+    grid-area: footer;
     align-items: center;
     grid-row: 6 / 7;
     align-items: flex-end;
