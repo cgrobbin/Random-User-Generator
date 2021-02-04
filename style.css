@@ -99,14 +99,15 @@ main > section > div {
     padding: 5px 0 0 3px;
 }
 
-main > section > p:first-child {
+main > section > p {
     grid-area: info;
-    font-size: 8px;
+    font-size: 15px;
     grid-column-start: 2;
     grid-column-end: 3;
     grid-row-start: 1;
     grid-row-end: 2;
-    margin-top: 10px;
+    margin-top: 40px;
+    color: slategrey;
 }
 
 main > section > p:last-child {
