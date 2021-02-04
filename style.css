@@ -58,6 +58,7 @@ footer {
     grid-area: "footer";
     align-items: center;
     grid-row: 6 / 7;
+    align-items: flex-end;
 }
 
 #userList {
@@ -81,7 +82,6 @@ section {
 }
 
 main > section > img {
-    grid-area: pic;
     border-radius: 3px;
     width: 50%;
     margin: 15px 0 0 25px;
@@ -90,32 +90,17 @@ main > section > img {
 }
 
 main > section > div {
-    grid-area: name;
-    grid-column-start: 1;
-    grid-column-end: 2;
-    grid-row-start: 2;
-    grid-row-end: 3;
     font-weight: bold;
     padding: 5px 0 0 3px;
 }
 
 main > section > p {
-    grid-area: info;
     font-size: 15px;
-    grid-column-start: 2;
-    grid-column-end: 3;
-    grid-row-start: 1;
-    grid-row-end: 2;
     margin-top: 40px;
     color: slategrey;
 }
 
 main > section > p:last-child {
-    grid-area: info;
-    grid-column-start: 2;
-    grid-column-end: 3;
-    grid-row-start: 2;
-    grid-row-end: 3;
     margin-top: -5px;
     color: blue;
     text-decoration: underline;
@@ -136,12 +121,8 @@ button {
         grid-template-columns: 30% 30% 30%;
         justify-content: space-around; 
     }
-    section {
-        display: grid;
-        grid-template-columns: 1fr 2fr;
-        grid-template-rows: 2fr 1fr;
-        grid-template-areas: 
-            "pic info"
-            "name info";
+    main > section > img {
+        align-content: center;
+        width: 35%;
     }
 } 

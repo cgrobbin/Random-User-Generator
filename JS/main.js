@@ -15,7 +15,6 @@ form.addEventListener("submit", (evt) => {
             return responseData.json()
         })
         .then((jsonData) => {
-            console.log("Here is the data:", jsonData)
             let people = jsonData.results
             people.forEach(addUser)
         })
@@ -31,7 +30,7 @@ const addUser = (person) => {
     let div = document.createElement("div")
     let p1 = document.createElement("p")
     let p2 = document.createElement("p")
-    img.src = `${person.picture.medium}`
+    img.src = `${person.picture.large}`
     div.textContent = `${person.name.first} ${person.name.last}`
     p1.textContent = `${person.location.city}, ${person.location.state}`
     p2.textContent = `${person.email}`
@@ -46,12 +45,3 @@ reload.addEventListener("click", (evt) => {
     window.location.reload()
     console.log("Reload Successful")
 })
-
-// const users = document.getElementsByClassName("userInfo")
-// users.addEventListener("toggle", (evt) => {
-//     if (users.style.display == "none") {
-//         users.style.display = "block"
-//     } else {
-//         users.style.display = "none"
-//     }
-// })
